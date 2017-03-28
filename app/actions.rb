@@ -7,11 +7,11 @@ def humanized_time_ago(time_ago_in_minutes)
 end
 
 get '/' do
-    post_fish = {
+    @post_fish = {
         username: "fishRfriends",
         avatar_url: "https:////c3.staticflickr.com/7/6154/buddyicons/59687764@N04.jpg?1316579694#59687764@N04",
         photo_url: "https://c2.staticflickr.com/8/7114/7561597888_8537b58e59_b.jpg",
-        humanized_time_ago: 15,
+        humanized_time_ago: humanized_time_ago(15),
         like_count: 0,
         comment_count: 1,
         comments: [{
@@ -20,11 +20,11 @@ get '/' do
         }]
     }
     
-    post_birds = {
+    @post_birds = {
         username: "fishRfriends",
         avatar_url: "https:////c3.staticflickr.com/7/6154/buddyicons/59687764@N04.jpg?1316579694#59687764@N04",
         photo_url: "https://c1.staticflickr.com/9/8189/8133094828_b81d53e14c_b.jpg",
-        humanized_time_ago: 65,
+        humanized_time_ago: humanized_time_ago(65),
         like_count: 0,
         comment_count: 1,
         comments: [{
@@ -33,11 +33,11 @@ get '/' do
         }]
     }
     
-    post_star = {
+    @post_star = {
         username: "fishRfriends",
         avatar_url: "https:////c3.staticflickr.com/7/6154/buddyicons/59687764@N04.jpg?1316579694#59687764@N04",
         photo_url: "https://c1.staticflickr.com/7/6057/6237130979_aeb92f4511_b.jpg",
-        humanized_time_ago: 65,
+        humanized_time_ago: humanized_time_ago(70),
         like_count: 0,
         comment_count: 1,
         comments: [{
@@ -46,5 +46,6 @@ get '/' do
         }]
     }
     
-    [post_fish, post_birds, post_star].to_s
+    [@post_fish, @post_birds, @post_star].to_s
+    erb :index
 end
