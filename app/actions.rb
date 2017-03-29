@@ -7,7 +7,7 @@ def humanized_time_ago(time_ago_in_minutes)
 end
 
 get '/' do
-    @post_fish = {
+     @post_fish = {
         username: "fishRfriends",
         avatar_url: "https:////c3.staticflickr.com/7/6154/buddyicons/59687764@N04.jpg?1316579694#59687764@N04",
         photo_url: "https://c2.staticflickr.com/8/7114/7561597888_8537b58e59_b.jpg",
@@ -46,6 +46,7 @@ get '/' do
         }]
     }
     
-    [@post_fish, @post_birds, @post_star].to_s
-    erb :index
+    @posts = [@post_fish, @post_birds, @post_star]
+    
+    erb (:index)
 end
