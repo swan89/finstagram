@@ -20,33 +20,33 @@ get '/' do
         }]
     }
     
-    @post_birds = {
-        username: "fishRfriends",
-        avatar_url: "https:////c3.staticflickr.com/7/6154/buddyicons/59687764@N04.jpg?1316579694#59687764@N04",
-        photo_url: "https://c1.staticflickr.com/9/8189/8133094828_b81d53e14c_b.jpg",
+    @post_hat = {
+        username: "piedhong",
+        avatar_url: "https:////c3.staticflickr.com/3/2091/buddyicons/24154092@N04.jpg?1271304991#24154092@N04",
+        photo_url: "https://c2.staticflickr.com/6/5016/5495645821_540ec0a444_b.jpg",
         humanized_time_ago: humanized_time_ago(65),
         like_count: 0,
         comment_count: 1,
         comments: [{
-            username: "fishRfriends",
-            text: "#notfish"
+            username: "piedhong",
+            text: "rad hat, thanks swan"
         }]
     }
     
-    @post_star = {
-        username: "fishRfriends",
-        avatar_url: "https:////c3.staticflickr.com/7/6154/buddyicons/59687764@N04.jpg?1316579694#59687764@N04",
-        photo_url: "https://c1.staticflickr.com/7/6057/6237130979_aeb92f4511_b.jpg",
+    @post_friends = {
+        username: "Doctor DSD",
+        avatar_url: "https:////c4.staticflickr.com/4/3052/buddyicons/23288606@N04.jpg?1248561163#23288606@N04",
+        photo_url: "https://c1.staticflickr.com/9/8341/8250549289_7fd8649a26_b.jpg",
         humanized_time_ago: humanized_time_ago(70),
         like_count: 0,
         comment_count: 1,
         comments: [{
-            username: "fishRfriends",
-            text: "Salt Spring Island"
+            username: "Doctor DSD",
+            text: "party bros"
         }]
     }
     
-    @posts = [@post_fish, @post_birds, @post_star]
+    @posts = [@post_fish, @post_hat, @post_friends]
     
     erb (:index)
 end
