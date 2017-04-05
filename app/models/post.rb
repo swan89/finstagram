@@ -10,7 +10,16 @@ class Post < ActiveRecord::Base
         if time_ago_in_minutes >= 60
             "#{(time_ago_in_minutes / 60).to_i} hours ago"
         else
-            "#{(time_ago_in_minutes.to_i} minutes ago"
+            "#{(time_ago_in_minutes.to_i)} minutes ago"
         end
     end
+    
+    def like_count
+        self.likes.size
+    end
+    
+    def comment_count
+        self.comments.size
+    end
+    
 end
